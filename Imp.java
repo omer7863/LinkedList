@@ -44,13 +44,13 @@ public class Imp {
         n1.next = n2; // link first node to second
         n2.next = n3; // link second node to third
         n3.next = n4; // link third node to fourth
-        n4.next = n1; // link fourth back to first (circular list)
+        // n4.next = n1; // link fourth back to first (circular list)
 
         // n4.prev = n3;
         // n3.prev = n2;
         // n2.prev = n1;
 
 
-        // printLinkedListBackward(n4);
+        printLinkedListForward(n1);
     }
 }
