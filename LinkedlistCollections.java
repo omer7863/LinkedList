@@ -11,7 +11,8 @@ public class LinkedlistCollections {
         list.addLast(30);
         list.addLast(40);
         list.addLast(50);
-        list.addFirst(5);
+        list.addFirst(599);
+        list.add(3,333);
 
         list.removeLast();
 
