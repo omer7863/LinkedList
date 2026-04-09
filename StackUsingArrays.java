@@ -1,0 +1,70 @@
+public class StackUsingArrays {
+
+    int arr[] = new int[5];
+    int top = -1;
+
+    void push(int val){
+        if(top == arr.length - 1){
+            System.out.println("Cannot add " + val + " due to Stack Overflow");
+            return;
+        }
+
+        top++;
+        arr[top] = val;
+        System.out.println(val + " : element added to stack");
+    }
+
+    int pop(){
+        if(top == -1){
+            System.out.println("Stack Underflow");
+            return -1;
+        }
+
+        int ele = arr[top];
+        top--;
+        System.out.println(ele + " element removed from the stack");
+        return ele;
+    }
+
+    int peek(){
+        if(top == -1){
+            System.out.println("Stack Underflow");
+            return -1;
+        }
+        System.out.println(arr[top] + " : element present at the top of the stack");
+        return arr[top];
+    }
+
+    boolean isEmpty(){
+        return top == -1;
+    }
+
+    void printStack(){
+        for(int i = 0; i <= top; i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+
+        StackUsingArrays st = new StackUsingArrays();
+
+        System.out.println("Stack Empty? " + st.isEmpty());
+
+        st.push(10);
+        st.push(20);
+        st.push(30);
+        st.push(40);
+        st.push(50);
+        st.push(60); // overflow
+
+        st.peek();
+        st.pop();
+        st.peek();
+
+        System.out.println("Stack Empty? " + st.isEmpty());
+
+        st.printStack();
+    }
+}
